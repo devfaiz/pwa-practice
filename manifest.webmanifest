@@ -1,0 +1,20 @@
+{
+  "name": "Pwa Practice",
+  "short_name": "pwa-practice",
+  "display": "standalone",
+  "start_url": "./",
+  "background_color": "#003844",
+  "description": "A very basic grid and pwa example",
+  "icons": [
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

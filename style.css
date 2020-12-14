@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #003844;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.container {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.container div {
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.container div:hover {
+  animation: rotation 2s ease-out;
+}
+
+@keyframes rotation {
+  0% {
+    opacity: 0.25;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #003844;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+body::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #796c97, #201c29 1px, #17141d 0, #17141d);
+}
